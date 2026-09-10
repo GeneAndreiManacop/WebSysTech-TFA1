@@ -6,7 +6,7 @@ class Users extends BaseController
 {
     public function index(): string
     {
-        $users = [
+        $data = [
             [
                 'id' => 1, 
                 'username' => 'juan_santos',
@@ -38,7 +38,7 @@ class Users extends BaseController
                 'role' => 'Staff'
             ],
         ];
-        return view('users', ['users' => $users]);
+        return view('users', ['users' => $data]);
     }
   
 }
