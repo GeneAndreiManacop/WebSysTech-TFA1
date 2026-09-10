@@ -35,7 +35,7 @@ To run the project locally, you will need:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/GeneAndreiManacop/WebSysTech-TFA1.git
    ```
 
 2. Place the project directory inside your XAMPP `htdocs` directory.
@@ -81,4 +81,4 @@ writable/            # Logs, cache, and other writable data
 
 **Course:** IT0049 - Web System Technologies  
 **Activity:** Technical Formative Assessment 1  
-**Project:** From Zero to Four Pages: Your First CodeIgniter Application
+**Title:** From Zero to Four Pages: Your First CodeIgniter Application
