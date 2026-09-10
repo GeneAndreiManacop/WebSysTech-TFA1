@@ -1,60 +1,84 @@
-# CodeIgniter 4 Framework
+# IT0049 TFA1 - Point of Sale System
 
-## What is CodeIgniter?
+A basic Point-of-Sale (POS) web application developed using CodeIgniter 4 for the IT0049 Web System Technologies course.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+This project demonstrates the basic use of CodeIgniter's routing, controllers, views, and static PHP arrays in a multi-page web application.
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Features
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+The application contains four pages:
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- **Home** - Landing page of the application
+- **About** - Basic information about the application
+- **Customer Accounts** - Displays customer records including full name, email, and phone number
+- **User Accounts** - Displays user/staff records including username, full name, and role
 
-## Important Change with index.php
+Customer and user records currently use static PHP arrays as temporary data sources. No database is used in this version of the application.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Built With
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+- PHP
+- CodeIgniter 4
+- HTML
+- CSS
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## Requirements
 
-## Repository Management
+To run the project locally, you will need:
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+- PHP
+- Apache (such as through XAMPP)
+- A web browser
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## Local Setup
 
-## Contributing
+1. Clone the repository:
 
-We welcome contributions from the community.
+   ```bash
+   git clone <repository-url>
+   ```
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+2. Place the project directory inside your XAMPP `htdocs` directory.
 
-## Server Requirements
+3. Create a `.env` file from the provided `env` template.
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+4. Configure the application's base URL in `.env` for your local environment.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+5. Start **Apache** through the XAMPP Control Panel.
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+6. Open the application through your browser using the configured local URL.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+## Application Routes
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+| Page | Route |
+|---|---|
+| Home | `/` |
+| About | `/about` |
+| Customer Accounts | `/customers` |
+| User Accounts | `/users` |
+
+## Deployment
+
+The application is hosted using InfinityFree.
+
+**Live Website:**  
+https://manacop-possystem-tfa1.infinityfree.me/
+
+## Project Structure
+
+```text
+app/
+├── Config/          # Application configuration and routes
+├── Controllers/     # Page, customer, and user controllers
+└── Views/           # Application views
+
+public/              # Public assets
+system/              # CodeIgniter framework files
+writable/            # Logs, cache, and other writable data
+```
+
+## Academic Information
+
+**Course:** IT0049 - Web System Technologies  
+**Activity:** Technical Formative Assessment 1  
+**Project:** From Zero to Four Pages: Your First CodeIgniter Application
