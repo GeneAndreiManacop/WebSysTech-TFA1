@@ -7,7 +7,7 @@ class Customers extends BaseController
     
     public function index(): string
     {
-        $customers = [
+        $data = [
             [
                 'id' => 1, 
                 'fullname' => 'Andrea Santos',
@@ -39,7 +39,7 @@ class Customers extends BaseController
                 'phone' => '09561234567'
             ],
         ];
-        return view('customers', ['customers' => $customers]);
+        return view('customers', ['customers' => $data]);
     }
   
 }
