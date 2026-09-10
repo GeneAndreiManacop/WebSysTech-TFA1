@@ -8,8 +8,10 @@
 
     <style>
         .about-container {
-            max-width: 1100px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 40px 20px;
         }
 
